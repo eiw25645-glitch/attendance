@@ -46,7 +46,7 @@ let showOld=false;
 function rWorkers(){
  const ws=DB.workers.filter(w=>showOld?w.active===false:w.active!==false);
  $('#workers').innerHTML=`<h1>จัดการรายชื่อ<small>${admin?'🔓 โหมดแอดมิน':'🔒 ต้องใช้รหัสแอดมินจึงแก้ไขได้'}</small></h1>
- <button class="cta" id="add"><span><b>＋ เพิ่มคนงานใหม่</b><small>ชื่อ-นามสกุล ชื่อเล่น เบอร์โทร</small></span><i>➜</i></button>
+ <button class="cta" id="add"><span><b>+ เพิ่มคนงานใหม่</b><small>ชื่อ-นามสกุล ชื่อเล่น เบอร์โทร</small></span><i>➜</i></button>
  <div class="tabs"><button data-o="0" class="${showOld?'':'on'}">ทำงานอยู่ (${act().length})</button><button data-o="1" class="${showOld?'on':''}">ออกแล้ว</button></div>
  ${ws.map(w=>`<div class="card wk" data-id="${w.id}"><div class="who"><b>${esc(w.nick)}</b><small>${wsub(w)}</small>${telA(w)}</div>
   <div class="acts"><button data-a="e">แก้ไข</button><button data-a="${showOld?'r':'d'}">${showOld?'กู้คืน':'ลบ'}</button></div></div>`).join('')||'<p class="empty">ยังไม่มีรายชื่อ</p>'}
