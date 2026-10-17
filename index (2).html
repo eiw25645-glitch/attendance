@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#eef0f6">
+<title>เช็คชื่อคนงาน</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="nav" id="nav">
+  <div class="brand"><span class="logo">☘</span><div><b>เช็คชื่อคนงาน</b><small>หจก.สรรเสริญการสร้าง</small></div></div>
+  <button data-p="check" class="on"><i>✅</i><span>เช็คชื่อ</span></button>
+  <button data-p="workers"><i>👷</i><span>รายชื่อ</span></button>
+  <button data-p="report"><i>📊</i><span>รายงาน</span></button>
+</aside>
+<main>
+  <section id="check" class="page on"></section>
+  <section id="workers" class="page"></section>
+  <section id="report" class="page"></section>
+</main>
+<div id="toast"></div>
+<dialog id="dlg"></dialog>
+<input type="file" id="file" accept=".json" hidden>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="seed.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
